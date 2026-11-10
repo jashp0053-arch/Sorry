@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I'm Sorry My Gracuu ❤️</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ffd6e7, #f6d8ff);
+  overflow: hidden;
+  color: #853657;
+}
+
+.card {
+  width: 90%;
+  max-width: 430px;
+  padding: 35px 25px;
+  text-align: center;
+  background: white;
+  border-radius: 28px;
+  box-shadow: 0 15px 45px #b94b7830;
+  z-index: 2;
+}
+
+.heart {
+  font-size: 60px;
+  animation: beat 1s infinite;
+}
+
+h1 {
+  color: #d13d80;
+  font-size: 36px;
+}
+
+p {
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+button {
+  border: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  background: #d94e8a;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#reply {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #d13d80;
+}
+
+@keyframes beat {
+  50% { transform: scale(1.2); }
+}
+
+.floating {
+  position: absolute;
+  bottom: -30px;
+  animation: floatUp 8s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="heart">💗</div>
+
+  <h1>I'm Sorry,<br>My Gracuu ❤️</h1>
+
+  <p>
+    My love, I know I make mistakes sometimes,
+    but hurting you is never my intention.
+
+    You are my happiness, my favourite person,
+    and my whole world.
+
+    I never want to lose your smile. 🥺
+
+    <br><br>
+
+    Please forgive me, baby.
+    I promise I'll try my best to make you happy
+    every single day.
+
+    <br><br>
+
+    <b>I love you so much, my Gracuu. ❤️</b>
+  </p>
+
+  <button onclick="forgive()">
+    Tap if you forgive me, Wifey 💕
+  </button>
+
+  <div id="reply"></div>
+
+  <p> Please smile for me, my wifeyyy! 🥹💗 </p>
+</div>
+
+<script>
+function forgive() {
+  document.getElementById("reply").innerHTML =
+    "Yayyy! I love you endlessly, Gracuu! 💖";
+}
+
+const hearts = ["❤️", "💗", "💕", "✨", "🌸"];
+
+for (let i = 0; i < 25; i++) {
+  let heart = document.createElement("div");
+  heart.className = "floating";
+  heart.innerHTML = hearts[i % hearts.length];
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (5 + Math.random() * 8) + "s";
+  heart.style.animationDelay = Math.random() * 5 + "s";
+  document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
